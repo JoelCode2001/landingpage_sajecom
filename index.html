@@ -1,206 +1,606 @@
-<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sajecom</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAJECOM | CONSTRUCTORA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <header class="header-landing">
-    <nav class="nav-header">
-      <div class="style-header"></div>
-    </nav>
-    <div class="wrap-logo">
-      <img src="/img/logo-dropcoding.svg" alt="" class="logo-header">
-    </div>
-  </header>
-
-  <section class="hero-section">
-    <div class="wrap-hero-section">
-      <h1>¿Quienes somos?</h1>
-      <p>Somos una empresa constructora comprometida con la excelencia en la industria de la construcción. Desde nuestra fundación en [Año de Fundación], hemos dedicado nuestro esfuerzo y pasión a la creación de obras de calidad que perduran en el tiempo</p>
-      <div class="wrap-cta">
-        <a href="/" class="cta-a">Llamada a la acción</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section logos-section">
-    <div class="wrap-logos-section">
-      <img src="img/logo-Google.png" alt="" class="logo-brand">
-      <img src="img/ikea-logo.jpg" alt="" class="logo-brand">
-      <img src="img/mercedes-logo.svg" alt="" class="logo-brand">
-      <img src="img/Apple-logo.svg" alt="" class="logo-brand">
-      <img src="img/zara-logo.jpg" alt="" class="logo-brand">
-    </div>
-  </section>
-
-  <section class="section servicios-section">
-    <div class="wrap-title-section">
-      <h2>Categorías de Servicios</h2>
-    </div>
-
-    <div class="wrap-servicios-section">
-      <a href="" class="item-servicios-section">
-        <img src="img/1.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/2.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/3.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/4.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/5.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/3.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/1.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/2.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-      <a href="" class="item-servicios-section">
-        <img src="img/3.jpg" alt="">
-          <p>Item categoría</p>
-        </img>
-      </a>
-    </div>
-  </section>
-
-  <section class="section two-column-section">
-
-    <div class="wrap-title-section">
-      <h2>Características de nuestros Servicios</h2>
-    </div>
-
-    <div class="wrap-two-column">
-      <div class="wrap-img_two-column">
-        <img src="img/disenador-trabajando.jpeg" alt="">
-      </div>
-
-      <div class="wrap-img_two-column">
-        <div class="wrap-text-column">
-          <h3>Más Características</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur facilis, nemo distinctio beatae quod molestiae illo dolores voluptas quae, autem corrupti maiores similique earum eaque aliquam at modi doloribus. Nam officiis sequi modi! Ipsum, vel!</p>
-          <div class="wrap-cta">
-            <a href="/" class="cta-a">Llamada a la acción</a>
-          </div>
+    <header class="header">
+        <a href="#" class="logo">SAJE<span>com</span></a>
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="19"
+                    height="19" viewBox="0 0 24 18" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </div>
+            <div id="info-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-hexagon" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+                    <path d="M12 9h.01" />
+                    <path d="M11 12h1v4h1" />
+                </svg>
+            </div>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section two-column-section form">
-
-    <div class="wrap-title-section">
-      <h2>Formulario de Contacto</h2>
-    </div>
-
-    <div class="wrap-two-column">
-
-      <div class="wrap-img_two-column">
-        <div class="wrap-text-column">
-          <h3>Contacta con nosotros</h3>
-
-          <form action="procesar_formulario.php" method="post" class="form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required="">
-            <br><br>
-            
-            <label for="asunto">Asunto:</label>
-            <input type="text" name="asunto" id="asunto" required="">
-            <br><br>
-            
-            <label for="mensaje">Mensaje:</label>
-            <br>
-            <textarea name="mensaje" id="mensaje" rows="4" cols="40" required=""></textarea>
-            <br><br>
-            
-            <input type="submit" value="Enviar" class="cta-a">
-          </form>
-
+        <div class="contact-info">
+            <div id="close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="info">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                </div>
+                <h3>Celular</h3>
+                <p>+51 923214241</p>
+            </div>
+            <div class="info">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                </div>
+                <h3>Email</h3>
+                <p>sajecom@sajecom.com.pes</p>
+            </div>
+            <div class="info">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                    </svg>
+                </div>
+                <h3>Ubicación</h3>
+                <p>Jr. Palomino 1344 - Huánuco - Cerro de Fel </p>
+            </div>
+            <div class="share">
+                <a href="#">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                            <path
+                                d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                            <path d="M8 11l0 5" />
+                            <path d="M8 8l0 .01" />
+                            <path d="M12 16l0 -5" />
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                            <path d="M16.5 7.5l0 .01" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <div class="wrap-img_two-column">
-        <img src="img/disenador-trabajando2.jpeg" alt="">
-      </div>
-    </div>
-  </section>
+    <main>
 
-  <footer class="footer-section">
-    <div class="wrap-footer-section">
-      <div class="wrap-social-logos">
-        <ul>
-          <li>
-            <a href="">
-              <img src="img/facebook.svg" alt="" class="social-logo">
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/twitter.svg" alt="" class="social-logo">
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/youtube.svg" alt="" class="social-logo">
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="img/instagram.svg" alt="" class="social-logo">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <section class="home" id="home">
+            <div class="swiper home-slider">
+                <div class="swiper-wrapper">
+                    <section class="swiper-slide slide"
+                        style="background: url(assets/slide/home-slide-1.jpg) no-repeat;">
+                        <div class="content">
+                            <h3>Descubre la Excelencia en Construcción</h3>
+                            <p>Diseñamos y Construimos Tu Futuro</p>
+                            <a href="#" class="btn">CONSTRUIR</a>
+                        </div>
+                    </section>
+                    <section class="swiper-slide slide"
+                        style="background: url(assets/slide/home-slide-2.jpg) no-repeat;">
+                        <div class="content">
+                            <h3>Somos lo que somos</h3>
+                            <p>no se que poner</p>
+                            <a href="#" class="btn">CONSTRUIR</a>
+                        </div>
+                    </section>
+                    <section class="swiper-slide slide"
+                        style="background: url(assets/slide/home-slide-3.jpg) no-repeat;">
+                        <div class="content">
+                            <h3>Somos lo que somos</h3>
+                            <p>no se que poner</p>
+                            <a href="#" class="btn">CONSTRUIR</a>
+                        </div>
+                    </section>
+                    <section class="swiper-slide slide"
+                        style="background: url(assets/slide/home-slide-.jpg) no-repeat;">
+                        <div class="content">
+                            <h3>Somos lo que somos</h3>
+                            <p>no se que poner</p>
+                            <a href="#" class="btn">CONSTRUIR</a>
+                        </div>
+                    </section>
+                    <section class="swiper-slide slide"
+                        style="background: url(assets/slide/home-slide-5.jpg) no-repeat;">
+                        <div class="content">
+                            <h3>Somos lo que somos</h3>
+                            <p>no se que poner</p>
+                            <a href="#" class="btn">CONSTRUIR</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
 
-    <div class="menu-footer-section">
-      <div class="wrap-menu-footer-section">
-        <ul>
-          <li><a href=""></a>Inicio</li>
-          <li><a href=""></a>Servicios</li>
-          <li><a href=""></a>Quienes Somos</li>
-          <li><a href=""></a>Blog</li>
-          <li><a href=""></a>Contacto</li>
-        </ul>
-      </div>
-    </div>
+        <section class="about" id="about">
+            <h1 class="heading">Nosotros</h1>
+            <div class="row">
+                <div class="video">
+                    <video src="assets/video/about_video.mp4" loop muted autoplay></video>
+                </div>
+                <div class="content">
+                    <h3>Trabajamos juntos en todo momento</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione esse recusandae maiores sunt,
+                        temporibus non soluta, id, quasi facilis sint voluptatum dignissimos totam? Repellat cupiditate
+                        quae
+                        neque cumque ratione autem!</p>
+                    <a href="#services" class="btn">Leer más</a>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <h3 class="num" data-val="25">0</h3>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="box">
+                    <h3 class="num" data-val="200">0</h3>
+                    <p>Proyectos culminados</p>
+                </div>
+                <div class="box">
+                    <h3 class="num" data-val="50">0</h3>
+                    <p>Clientes satisfechos</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="menu-footer-section">
-      <div class="footer-creds">
-        <p>©copytight 2023 - dropcoding.com - Todos los derechos reservados.</p>
-      </div>
-    </div>
+        <section class="services" id="services">
+            <h1 class="heading">Servicios</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="assets/slide/img1.jpg" alt="">
+                    <h3>Renovacion</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img2.jpg" alt="">
+                    <h3>Diseño arquitectonico</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img3.jpg" alt="">
+                    <h3>Construccion de edificaciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img3.jpg" alt="">
+                    <h3>Construccion de edificaciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img3.jpg" alt="">
+                    <h3>Construccion de edificaciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img3.jpg" alt="">
+                    <h3>Construccion de edificaciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img src="assets/slide/img3.jpg" alt="">
+                    <h3>Construccion de edificaciones</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
 
-  </footer>
+        <section class="projects" id="projects">
+            <h1 class="heading">Proyectos</h1>
+            <div class="box-container">
+                <a href="assets/projects/project-1.jpg" class="box">
+                    <div class="image">
+                        <img src="assets/projects/project-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Home new 1</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path
+                                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                            </svg>
+                        </i>
+                    </div>
+                </a>
+                <a href="assets/projects/project-2.jpg" class="box">
+                    <div class="image">
+                        <img src="assets/projects/project-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Home new 2</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path
+                                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                            </svg>
+                        </i>
+                    </div>
+                </a>
+                <a href="assets/projects/project-3.jpg" class="box">
+                    <div class="image">
+                        <img src="assets/projects/project-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Home new 3</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24"
+                                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path
+                                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                            </svg>
+                        </i>
+                    </div>
+                </a>
+            </div>
+        </section>
 
+        <section class="reviews">
+            <h1 class="heading">Reseñas de clientes</h1>
+            <div class="swiper reviews-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis adipisci eligendi
+                            sequi
+                            voluptates porro quo deserunt veniam ab possimus? Saepe suscipit laborum rerum architecto,
+                            voluptatibus quas excepturi vitae molestiae.</p>
+                        <div class="user">
+                            <img src="assets/avatars/1.jpg" alt="">
+                            <div class="info">
+                                <h3>Name user</h3>
+                                <div class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At in, impedit voluptatum mollitia
+                            vel
+                            ipsa soluta s.</p>
+                        <div class="user">
+                            <img src="assets/avatars/2.jpg" alt="">
+                            <div class="info">
+                                <h3>Name user</h3>
+                                <div class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At in, impedit voluptatum mollitia
+                            vel
+                            ipsa soluta s.</p>
+                        <div class="user">
+                            <img src="assets/avatars/3.jpg" alt="">
+                            <div class="info">
+                                <h3>Name user</h3>
+                                <div class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At in, impedit voluptatum mollitia
+                            vel
+                            ipsa soluta s.</p>
+                        <div class="user">
+                            <img src="assets/avatars/3.jpg" alt="">
+                            <div class="info">
+                                <h3>Name user</h3>
+                                <div class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-star-filled" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                            stroke-width="0" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1 class="heading">Contacto</h1>
+            <div class="row">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d584.1922978625887!2d-76.2534853660543!3d-9.937147075346765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1699146672233!5m2!1ses!2spe"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form action="/">
+                    <h3>get in touch</h3>
+                    <input type="text">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.projects .box-container'), {
+            mode: 'lg-fade',
+        })
+    </script>
 </body>
+
 </html>
