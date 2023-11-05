@@ -79,6 +79,15 @@ section {
     padding: 5rem;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--yellow);
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
 .heading {
     margin-bottom: 3rem;
     @include titleText(3rem);
@@ -124,13 +133,18 @@ section {
     }
 
     .navbar a {
-        @include titleText(2rem);
+        @include titleText(1.6rem);
         margin: 1rem;
 
-        // &:hover {
-        //     border-bottom: .4rem solid var(--yellow);
-        //     animation: show .4s ease-out;
-        // }
+        &:hover {
+            border-bottom: .4rem solid var(--yellow);
+            padding: .5rem;
+        }
+
+        &.active {
+            border-bottom: .4rem solid var(--yellow);
+            padding: .5rem;
+        }
     }
 
     .icons div {
@@ -266,11 +280,6 @@ section {
     }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--yellow);
-}
-
 .about {
     .row {
         display: flex;
@@ -323,7 +332,11 @@ section {
 }
 
 .services {
-    background: var(--light-bg);
+    background: var(--light-color);
+
+    .heading {
+        color: var(--white)
+    }
 
     .box-container {
         @include grid(25rem);
@@ -337,6 +350,7 @@ section {
 
             &:hover img {
                 transform: translateY(-1rem);
+
             }
 
             img {
@@ -368,22 +382,45 @@ section {
         @include grid(30rem);
 
         .box {
-            cursor: initial;
+            cursor: pointer;
 
-            &:hover .image img {
-                transform: scale(1.1);
-                filter: blur(4px);
-            }
+            // &:hover .image img {
+            //     transform: scale(1.1);
+            //     filter: blur(4px);
+            // }
+
+            // &:hover .image img {
+            //     transform: scale(1.1);
+            // }
 
             .image {
                 height: 40rem;
                 overflow: hidden;
+                position: relative;
 
                 img {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
                 }
+
+                &::after {
+                    --yellow: #f5c123ad;
+                    content: url(/assets/icons/eye.svg);
+                    position: absolute;
+                    background: var(--yellow);
+                    inset: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: all .2s ease;
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                }
+
             }
 
             .content {
@@ -403,22 +440,10 @@ section {
                         @include graphText(1.5rem)
                     }
                 }
-
-                i {
-                    width: 7.5rem;
-                    font-size: 3rem;
-                    background: var(--yellow);
-                    color: var(--white);
-                    cursor: pointer;
-                    text-align: center;
-                    line-height: 7.5rem;
-                    padding: 3rem 0;
-                }
             }
         }
     }
 }
-
 
 .reviews {
 
@@ -475,10 +500,75 @@ section {
     }
 }
 
-
 .contact {
     background: var(--light-bg);
+
+    .heading {
+        color: var(--black);
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .map {
+            flex: 1 1 41rem;
+            width: 100%;
+        }
+
+        form {
+            flex: 1 1 41rem;
+            background: var(--white);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+
+            .box {
+                margin: .7rem 0;
+                width: 100%;
+                padding: 1.5rem;
+                font-size: 1.6rem;
+                color: var(--light-color);
+                outline: none;
+                border-bottom: var(--border);
+
+                &:focus {
+                    border-bottom: var(--border);
+                    border-color: var(--yellow);
+                    transition: all 0.3s ease;
+                }
+            }
+
+
+            textarea {
+                height: 15rem;
+                resize: none;
+            }
+
+            input[type=submit] {
+                width: 100%;
+            }
+        }
+    }
 }
+
+.logo-container {
+    text-align: center;
+    height: fit-content;
+
+    h3 {
+        @include titleText(3rem);
+        padding-bottom: 2rem;
+    }
+
+    img {
+        height: 10rem;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+
 
 
 
@@ -513,23 +603,54 @@ section {
         }
 
         .navbar {
-            position: absolute;
-            top: 99%;
-            left: 0;
+            position: fixed;
+            top: 0;
             right: 0;
-            background: var(--light-bg);
-            border-top: var(--border);
-            border-bottom: var(--border);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            width: 25rem;
+            background-color: var(--white);
+            height: 100%;
+            text-align: center;
+            z-index: 1100;
+            padding: 0 1rem;
+            padding-top: 3rem;
+            display: none;
 
             &.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, .7);
+                display: block;
+                animation: show .4s ease-out;
             }
+
+            // position: absolute;
+            // top: 99%;
+            // left: 0;
+            // right: 0;
+            // background: var(--light-bg);
+            // border-top: var(--border);
+            // border-bottom: var(--border);
+            // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            // &.active {
+            //     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            // }
 
             a {
                 display: block;
-                margin: 2rem;
+                padding: 1rem;
+                margin: 1rem;
+
+                &:hover {
+                    background: var(--yellow);
+                    padding: .5rem;
+                    border-bottom: none;
+                }
+
+                &.active {
+                    background: var(--yellow);
+                    padding: .5rem;
+                }
             }
+
         }
 
         .icons {
