@@ -1,5 +1,6 @@
-const navbar = document.querySelector('.navbar')
-const contact = document.querySelector('.contact-info')
+const navbar = document.querySelector('#menu-nav')
+const header = document.querySelector('.header')
+
 const navLinks = document.querySelectorAll('.navbar a')
 navLinks.forEach(link => {
     link.addEventListener('click', (event) => {
@@ -17,18 +18,13 @@ navLinks.forEach(link => {
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active')
 }
-document.querySelector('#info-btn').onclick = () => {
-    contact.classList.toggle('active')
-    navbar.classList.remove('active')
-}
 
 document.querySelector('#close').onclick = () => {
-    contact.classList.remove('active')
+    navbar.classList.remove('active')
 }
 
 window.onscroll = () => {
-    navbar.classList.remove('active')
-    contact.classList.remove('active')
+    header.classList.toggle('sticky', window.scrollY > 30)
 }
 
 var swiper = new Swiper('.home-slider', {
@@ -70,7 +66,7 @@ var swiper = new Swiper('.reviews-slider', {
 var swiper = new Swiper('.logo-slider', {
     loop: true,
     grabCursor: true,
-    spaceBetween: 10,
+    spaceBetween: 5,
     speed: 6000,
     autoplay: {
         delay: 1,
@@ -87,7 +83,7 @@ var swiper = new Swiper('.logo-slider', {
             slidesPerView: 4,
         },
         1000: {
-            slidesPerView: 5,
+            slidesPerView: 4,
         },
     },
 });
@@ -106,4 +102,8 @@ values.forEach(value => {
             clearInterval(counter)
         }
     }, duration)
+})
+
+lightGallery(document.querySelector('.projects .box-container'), {
+    mode: 'lg-fade',
 })
