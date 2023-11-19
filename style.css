@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 :root {
+  --apple-50: #f3fcf1;
+  --apple-100: #e1f9df;
+  --apple-200: #c5f2c0;
+  --apple-300: #95e78e;
+  --apple-400: #5fd256;
+  --apple-500: #39b82f;
+  --apple-600: #2a9b22;
+  --apple-700: #24771e;
+  --apple-800: #1f5f1c;
+  --apple-900: #1b4e19;
+  --apple-950: #082b08;
   --white: #fff;
   --black: #111;
   --yellow: #f5bf23;
@@ -23,7 +34,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  transition: all 0.15s ease;
 }
 
 html {
@@ -60,14 +70,14 @@ section {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
-  background: var(--light-title);
-  color: var(--dark-text);
+  background: var(--apple-500);
+  color: var(--apple-50);
   cursor: pointer;
   font-size: 1.7rem;
   text-transform: capitalize;
 }
 .btn:hover {
-  background: var(--light-text);
+  background: var(--apple-600);
 }
 
 #menu-nav {
@@ -84,21 +94,21 @@ section {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  background: var(--white);
+  background: var(--apple-100);
 }
 .header.sticky {
-  background: var(--secondary);
+  background: var(--apple-600);
   animation: none;
 }
 .header.sticky .navbar a {
-  color: var(--white);
+  color: var(--apple-50);
 }
 .header.sticky .navbar a:hover {
   padding: 0.5rem;
-  color: var(--light-text);
+  color: var(--apple-950);
 }
 .header.sticky .navbar a.active {
-  color: var(--light-text);
+  color: var(--apple-950);
   padding: 0.5rem;
 }
 .header.sticky .social-links a {
@@ -121,18 +131,18 @@ section {
 }
 .header .navbar a:hover {
   padding: 0.5rem;
-  color: var(--color-bg);
+  color: var(--apple-400);
 }
 .header .navbar a.active {
-  color: var(--color-bg);
+  color: var(--apple-400);
   padding: 0.5rem;
 }
 .header .social-links a {
-  color: var(--light-title);
+  color: var(--apple-950);
   padding: 0.7rem;
 }
 .header .social-links a:hover {
-  color: var(--color-bg);
+  color: var(--apple-400);
 }
 .header .icons #menu-btn {
   margin-right: 4rem;
@@ -181,14 +191,14 @@ section {
   text-transform: capitalize;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--light-bg);
+  color: var(--apple-100);
 }
 .home .slide .content p {
   font-size: 1.6rem;
   color: var(--light-text);
   line-height: 1.5;
   padding: 1rem 0;
-  color: var(--light-bg);
+  color: var(--apple-100);
 }
 
 .about .row {
