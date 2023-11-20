@@ -311,7 +311,7 @@ section {
 }
 .projects .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
   gap: 2rem;
 }
 .projects .box-container .box {
@@ -497,6 +497,9 @@ section {
   section {
     padding: 3rem 5%;
   }
+  .projects .box-container {
+    justify-items: center;
+  }
 }
 @media (max-width: 991px) {
   html {
@@ -603,6 +606,9 @@ section {
   }
   #menu-nav #links a:hover {
     color: var(--color-bg);
+  }
+  .projects {
+    justify-items: center;
   }
 }
 @media (max-width: 768px) {
