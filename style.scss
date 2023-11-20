@@ -40,7 +40,6 @@
 @mixin titleText($titleSize, $titleWeight) {
     font-size: $titleSize;
     color: var(--light-title);
-    text-transform: capitalize;
     font-weight: $titleWeight;
 }
 
@@ -91,7 +90,7 @@ section {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--color-bg);
+    color: var(--apple-500);
 }
 
 .swiper-wrapper {
@@ -102,21 +101,21 @@ section {
     margin-bottom: 3rem;
     @include titleText(3rem, 500);
     padding-left: 1rem;
-    border-left: 1rem solid var(--secondary);
+    border-left: 1rem solid var(--apple-500);
 }
 
 .btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
-    background: var(--apple-500);
+    background: var(--apple-600);
     color: var(--apple-50);
     cursor: pointer;
     font-size: 1.7rem;
-    text-transform: capitalize;
+    font-weight: 500;
 
     &:hover {
-        background: var(--apple-600);
+        background: var(--apple-500);
     }
 }
 
@@ -134,45 +133,10 @@ section {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    background: var(--apple-100);
-
-    &.sticky {
-        background: var(--apple-600);
-        animation: none;
-
-        .navbar {
-
-            a {
-                color: var(--apple-50);
-
-                &:hover {
-                    padding: .5rem;
-                    color: var(--apple-950);
-                }
-
-                &.active {
-                    color: var(--apple-950);
-                    padding: .5rem;
-                }
-            }
-        }
-
-        .social-links {
-            a {
-                color: var(--white);
-                padding: .7rem;
-
-                &:hover {
-                    color: var(--light-text);
-                }
-            }
-        }
-
-    }
+    background: var(--apple-50);
 
     .logo img {
-        width: 70px;
-        height: 70px
+        width: 15rem;
     }
 
     .navbar {
@@ -181,24 +145,35 @@ section {
             margin: 1rem;
 
             &:hover {
-                padding: .5rem;
                 color: var(--apple-400);
             }
 
             &.active {
                 color: var(--apple-400);
-                padding: .5rem;
             }
         }
     }
 
     .social-links {
+        text-align: center;
+
         a {
             color: var(--apple-950);
             padding: .7rem;
 
             &:hover {
                 color: var(--apple-400);
+            }
+        }
+
+        .info {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.4rem 0 0;
+
+            p {
+                cursor: pointer;
+                @include titleText(1.2rem, 550)
             }
         }
     }
@@ -231,6 +206,7 @@ section {
     .slide {
         min-height: 40rem;
         display: flex;
+        justify-content: center;
         align-items: center;
         position: relative;
         background-size: cover !important;
@@ -243,24 +219,32 @@ section {
             left: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(60deg, rgb(37, 37, 37), transparent);
+            background: linear-gradient(185deg, rgb(37, 37, 37), transparent);
         }
 
+
+
         .content {
-            width: 50rem;
+            width: 80rem;
             position: relative;
             padding: 3rem;
+            text-align: center;
 
             h3 {
-                @include titleText(5rem, 600);
+                @include titleText(6rem, 600);
                 text-transform: uppercase;
                 color: var(--apple-100)
             }
 
             p {
-                @include graphText(1.6rem);
+                @include graphText(2rem);
                 padding: 1rem 0;
+                font-weight: 500;
                 color: var(--apple-100)
+            }
+
+            a {
+                margin-top: 4rem;
             }
         }
     }
@@ -273,26 +257,25 @@ section {
         flex-wrap: wrap;
         gap: 3rem;
 
-        .video {
+        .img_about {
             flex: 1 1 41rem;
 
-            video {
+            img {
                 width: 100%;
             }
         }
 
         .content {
-            flex: 1 1 41rem;
+            flex: 1 1 20rem;
 
             h3 {
-                @include titleText(3.5rem, 500);
+                @include titleText(3rem, 500);
             }
 
             p {
                 @include graphText(1.5rem);
-                padding: 1rem;
+                margin-bottom: 1.5rem;
             }
-
         }
     }
 
@@ -300,15 +283,10 @@ section {
         margin-top: 3rem;
         @include grid(16rem);
         align-items: flex-end;
-        background: url(assets/bg/bg-1.svg) no-repeat;
-        background-size: cover !important;
 
         .box {
-            background: rgba(255, 255, 255, 0.76);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5.5px);
-            border: 1px solid rgba(255, 0, 0, 0.01);
             text-align: center;
+            background: var(--apple-100);
             padding: 3rem 2rem;
 
             h3 {
@@ -323,10 +301,8 @@ section {
     }
 }
 
-.services {
-    background-color: #FFF6F4;
-    background-image: radial-gradient(#0C356A 0.45px, #ffffff 0.45px);
-    background-size: 9px 9px;
+.goals {
+    background: var(--apple-300);
 
     .heading {
         color: var(--light-title)
@@ -336,18 +312,11 @@ section {
         @include grid(25rem);
 
         .box {
-            align-items: center;
-            padding: 3rem;
-            background: rgba(217, 217, 217, 0.58);
-            border: 1px solid white;
-            box-shadow: 2px 7px 51px rgba(75, 75, 75, 0.22);
-            backdrop-filter: blur(6px);
-            border-radius: 17px;
             text-align: center;
-            transition: all 0.5s;
+            padding: 3rem;
+            background: var(--apple-50);
 
             &:hover {
-                border: 1px solid var(--light-title);
                 transform: scale(1.01);
             }
 
@@ -363,17 +332,17 @@ section {
 
             p {
                 @include graphText(1.5rem);
-
             }
         }
     }
 }
 
+
 .projects {
-    background: var(--light-title);
+    background: var(--apple-200);
 
     .heading {
-        color: var(--white)
+        color: var(--light-title)
     }
 
     .box-container {
@@ -382,10 +351,6 @@ section {
         .box {
             cursor: pointer;
             width: 30rem;
-
-            &:hover .image img {
-                filter: blur(1px);
-            }
 
             .image {
                 width: 30rem;
@@ -400,16 +365,20 @@ section {
                 }
 
                 &::after {
-                    --color-bg: #ffa41b8f;
-                    content: url(/assets/icons/eye.svg);
+                    --bg-project: #07254185;
+                    content: 'Ver';
                     position: absolute;
-                    background: var(--color-bg);
+                    background: var(--bg-project);
                     inset: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     opacity: 0;
                     transition: all .2s ease;
+                    text-align: center;
+                    color: var(--apple-50);
+                    font-size: 2rem;
+                    font-weight: 500;
                 }
 
                 &:hover::after {
@@ -420,7 +389,7 @@ section {
 
             .content {
                 display: flex;
-                background: var(--light-bg);
+                background: var(--white);
                 justify-content: space-between;
                 width: 30rem;
 
@@ -430,12 +399,13 @@ section {
                     h3 {
                         @include titleText(1.7rem, 600);
                         text-align: center;
+                        margin-bottom: 1rem;
                     }
 
                     p {
-
-                        @include graphText(1.5rem);
+                        @include graphText(1.4rem);
                         font-weight: 500;
+                        text-align: justify;
                     }
                 }
             }
@@ -443,63 +413,62 @@ section {
     }
 }
 
-.reviews {
+// .reviews {
 
-    .reviews-slider {
-        height: fit-content;
-    }
+//     .reviews-slider {
+//         height: fit-content;
+//     }
 
-    .slide {
-        p {
-            padding: 1.4rem;
-            background: var(--light-bg);
-            position: relative;
-            margin-bottom: 3rem;
-            line-height: 3rem;
+//     .slide {
+//         p {
+//             padding: 1.4rem;
+//             background: var(--light-bg);
+//             position: relative;
+//             margin-bottom: 3rem;
+//             line-height: 3rem;
 
-            @include titleText(1.4rem, 400);
+//             @include titleText(1.4rem, 400);
 
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: -1rem;
-                left: 2rem;
-                height: 2rem;
-                width: 2rem;
-                background: var(--light-bg);
-                transform: rotate(45deg);
-            }
-        }
+//             &::before {
+//                 content: '';
+//                 position: absolute;
+//                 bottom: -1rem;
+//                 left: 2rem;
+//                 height: 2rem;
+//                 width: 2rem;
+//                 background: var(--light-bg);
+//                 transform: rotate(45deg);
+//             }
+//         }
 
-        .user {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+//         .user {
+//             display: flex;
+//             align-items: center;
+//             gap: 1.5rem;
 
-            img {
-                height: 7rem;
-                width: 7rem;
-            }
+//             img {
+//                 height: 7rem;
+//                 width: 7rem;
+//             }
 
-            h3 {
-                @include titleText(1.7rem, 600);
-            }
+//             h3 {
+//                 @include titleText(1.7rem, 600);
+//             }
 
-            .stars {
-                padding-top: .5rem;
+//             .stars {
+//                 padding-top: .5rem;
 
-                svg {
-                    width: 1.5rem;
-                    color: var(--color-bg);
-                }
+//                 svg {
+//                     width: 1.5rem;
+//                     color: var(--color-bg);
+//                 }
 
-            }
-        }
-    }
-}
+//             }
+//         }
+//     }
+// }
 
 .contact {
-    background: var(--dark-text);
 
     .row {
         display: flex;
@@ -515,7 +484,7 @@ section {
             flex: 1 1 41rem;
             background: var(--white);
             padding: 2rem;
-            box-shadow: 0 -1rem 8rem 3rem rgba(81, 81, 81, 0.146);
+            box-shadow: 1rem 1rem 9rem 1rem rgba(81, 81, 81, 0.146);
 
             .box {
                 margin: .7rem 0;
@@ -528,7 +497,7 @@ section {
 
                 &:focus {
                     border-bottom: var(--border);
-                    border-color: var(--yellow);
+                    border-color: var(--apple-400);
                     transition: 0.4s ease;
                 }
             }
@@ -565,22 +534,17 @@ section {
 
 .footer {
     .copyright {
-        background: var(--light-title);
+        background: var(--apple-700);
         padding: 2rem;
-        color: var(--dark-text);
         width: 100%;
 
         p {
-            @include titleText(1.4rem, 300);
-            color: var(--dark-text);
-
+            @include titleText(1.4rem, 500);
+            color: var(--apple-50);
             text-align: center;
         }
     }
 }
-
-
-
 
 
 
@@ -594,6 +558,7 @@ section {
     section {
         padding: 3rem 5%;
     }
+
     .projects {
         .box-container {
             justify-items: center;
@@ -620,28 +585,6 @@ section {
             display: none;
         }
 
-        &.sticky {
-            .icons #menu-btn {
-                color: var(--dark-text);
-            }
-
-            .navbar {
-                a {
-                    color: var(--light-text);
-
-                    &:hover {
-                        padding: .5rem;
-                        color: var(--color-bg);
-                    }
-
-                    &.active {
-                        color: var(--color-bg);
-                        padding: .5rem;
-                    }
-                }
-            }
-        }
-
         .social-links {
             display: none;
         }
@@ -652,7 +595,7 @@ section {
         top: 0;
         right: 0;
         width: 30rem;
-        background: var(--dark-text);
+        background: var(--apple-50);
         height: 100%;
         text-align: center;
         z-index: 1100;
@@ -713,13 +656,11 @@ section {
             @include titleText(1.5rem, bold);
 
             &:hover {
-                padding: .5rem;
-                color: var(--color-bg);
+                color: var(--apple-400);
             }
 
             &.active {
-                color: var(--color-bg);
-                padding: .5rem;
+                color: var(--apple-400);
             }
         }
 
@@ -729,7 +670,7 @@ section {
                 padding: .7rem;
 
                 &:hover {
-                    color: var(--color-bg);
+                    color: var(--apple-400);
                 }
             }
         }
@@ -737,6 +678,16 @@ section {
 
     .projects {
         justify-items: center;
+
+        .box-container {
+            .box {
+                .image {
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -763,5 +714,11 @@ section {
 @media (max-width:450px) {
     html {
         font-size: 50%;
+    }
+
+    .about {
+        .box-container {
+            @include grid(25rem);
+        }
     }
 }

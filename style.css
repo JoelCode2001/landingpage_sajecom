@@ -49,7 +49,7 @@ section {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--color-bg);
+  color: var(--apple-500);
 }
 
 .swiper-wrapper {
@@ -60,24 +60,23 @@ section {
   margin-bottom: 3rem;
   font-size: 3rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 500;
   padding-left: 1rem;
-  border-left: 1rem solid var(--secondary);
+  border-left: 1rem solid var(--apple-500);
 }
 
 .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
-  background: var(--apple-500);
+  background: var(--apple-600);
   color: var(--apple-50);
   cursor: pointer;
   font-size: 1.7rem;
-  text-transform: capitalize;
+  font-weight: 500;
 }
 .btn:hover {
-  background: var(--apple-600);
+  background: var(--apple-500);
 }
 
 #menu-nav {
@@ -94,48 +93,25 @@ section {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  background: var(--apple-100);
-}
-.header.sticky {
-  background: var(--apple-600);
-  animation: none;
-}
-.header.sticky .navbar a {
-  color: var(--apple-50);
-}
-.header.sticky .navbar a:hover {
-  padding: 0.5rem;
-  color: var(--apple-950);
-}
-.header.sticky .navbar a.active {
-  color: var(--apple-950);
-  padding: 0.5rem;
-}
-.header.sticky .social-links a {
-  color: var(--white);
-  padding: 0.7rem;
-}
-.header.sticky .social-links a:hover {
-  color: var(--light-text);
+  background: var(--apple-50);
 }
 .header .logo img {
-  width: 70px;
-  height: 70px;
+  width: 15rem;
 }
 .header .navbar a {
   font-size: 1.6rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: bold;
   margin: 1rem;
 }
 .header .navbar a:hover {
-  padding: 0.5rem;
   color: var(--apple-400);
 }
 .header .navbar a.active {
   color: var(--apple-400);
-  padding: 0.5rem;
+}
+.header .social-links {
+  text-align: center;
 }
 .header .social-links a {
   color: var(--apple-950);
@@ -143,6 +119,17 @@ section {
 }
 .header .social-links a:hover {
   color: var(--apple-400);
+}
+.header .social-links .info {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.4rem 0 0;
+}
+.header .social-links .info p {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--light-title);
+  font-weight: 550;
 }
 .header .icons #menu-btn {
   margin-right: 4rem;
@@ -166,6 +153,7 @@ section {
 .home .slide {
   min-height: 40rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   background-size: cover !important;
@@ -178,27 +166,31 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(60deg, rgb(37, 37, 37), transparent);
+  background: linear-gradient(185deg, rgb(37, 37, 37), transparent);
 }
 .home .slide .content {
-  width: 50rem;
+  width: 80rem;
   position: relative;
   padding: 3rem;
+  text-align: center;
 }
 .home .slide .content h3 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--apple-100);
 }
 .home .slide .content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--light-text);
   line-height: 1.5;
   padding: 1rem 0;
+  font-weight: 500;
   color: var(--apple-100);
+}
+.home .slide .content a {
+  margin-top: 4rem;
 }
 
 .about .row {
@@ -207,26 +199,25 @@ section {
   flex-wrap: wrap;
   gap: 3rem;
 }
-.about .row .video {
+.about .row .img_about {
   flex: 1 1 41rem;
 }
-.about .row .video video {
+.about .row .img_about img {
   width: 100%;
 }
 .about .row .content {
-  flex: 1 1 41rem;
+  flex: 1 1 20rem;
 }
 .about .row .content h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 500;
 }
 .about .row .content p {
   font-size: 1.5rem;
   color: var(--light-text);
   line-height: 1.5;
-  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 .about .box-container {
   margin-top: 3rem;
@@ -234,21 +225,15 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
   gap: 2rem;
   align-items: flex-end;
-  background: url(assets/bg/bg-1.svg) no-repeat;
-  background-size: cover !important;
 }
 .about .box-container .box {
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.5px);
-  border: 1px solid rgba(255, 0, 0, 0.01);
   text-align: center;
+  background: var(--apple-100);
   padding: 3rem 2rem;
 }
 .about .box-container .box h3 {
   font-size: 4rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 500;
 }
 .about .box-container .box p {
@@ -258,56 +243,46 @@ section {
   font-weight: 600;
 }
 
-.services {
-  background-color: #FFF6F4;
-  background-image: radial-gradient(#0C356A 0.45px, #ffffff 0.45px);
-  background-size: 9px 9px;
+.goals {
+  background: var(--apple-300);
 }
-.services .heading {
+.goals .heading {
   color: var(--light-title);
 }
-.services .box-container {
+.goals .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
   gap: 2rem;
 }
-.services .box-container .box {
-  align-items: center;
-  padding: 3rem;
-  background: rgba(217, 217, 217, 0.58);
-  border: 1px solid white;
-  box-shadow: 2px 7px 51px rgba(75, 75, 75, 0.22);
-  backdrop-filter: blur(6px);
-  border-radius: 17px;
+.goals .box-container .box {
   text-align: center;
-  transition: all 0.5s;
+  padding: 3rem;
+  background: var(--apple-50);
 }
-.services .box-container .box:hover {
-  border: 1px solid var(--light-title);
+.goals .box-container .box:hover {
   transform: scale(1.01);
 }
-.services .box-container .box img {
+.goals .box-container .box img {
   height: 7rem;
   margin-bottom: 0.5rem;
 }
-.services .box-container .box h3 {
+.goals .box-container .box h3 {
   font-size: 1.7rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 600;
   padding: 0.5rem;
 }
-.services .box-container .box p {
+.goals .box-container .box p {
   font-size: 1.5rem;
   color: var(--light-text);
   line-height: 1.5;
 }
 
 .projects {
-  background: var(--light-title);
+  background: var(--apple-200);
 }
 .projects .heading {
-  color: var(--white);
+  color: var(--light-title);
 }
 .projects .box-container {
   display: grid;
@@ -317,9 +292,6 @@ section {
 .projects .box-container .box {
   cursor: pointer;
   width: 30rem;
-}
-.projects .box-container .box:hover .image img {
-  filter: blur(1px);
 }
 .projects .box-container .box .image {
   width: 30rem;
@@ -333,23 +305,27 @@ section {
   object-fit: cover;
 }
 .projects .box-container .box .image::after {
-  --color-bg: #ffa41b8f;
-  content: url(/assets/icons/eye.svg);
+  --bg-project: #07254185;
+  content: "Ver";
   position: absolute;
-  background: var(--color-bg);
+  background: var(--bg-project);
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: all 0.2s ease;
+  text-align: center;
+  color: var(--apple-50);
+  font-size: 2rem;
+  font-weight: 500;
 }
 .projects .box-container .box .image:hover::after {
   opacity: 1;
 }
 .projects .box-container .box .content {
   display: flex;
-  background: var(--light-bg);
+  background: var(--white);
   justify-content: space-between;
   width: 30rem;
 }
@@ -359,67 +335,18 @@ section {
 .projects .box-container .box .content .info h3 {
   font-size: 1.7rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .projects .box-container .box .content .info p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--light-text);
   line-height: 1.5;
   font-weight: 500;
+  text-align: justify;
 }
 
-.reviews .reviews-slider {
-  height: fit-content;
-}
-.reviews .slide p {
-  padding: 1.4rem;
-  background: var(--light-bg);
-  position: relative;
-  margin-bottom: 3rem;
-  line-height: 3rem;
-  font-size: 1.4rem;
-  color: var(--light-title);
-  text-transform: capitalize;
-  font-weight: 400;
-}
-.reviews .slide p::before {
-  content: "";
-  position: absolute;
-  bottom: -1rem;
-  left: 2rem;
-  height: 2rem;
-  width: 2rem;
-  background: var(--light-bg);
-  transform: rotate(45deg);
-}
-.reviews .slide .user {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.reviews .slide .user img {
-  height: 7rem;
-  width: 7rem;
-}
-.reviews .slide .user h3 {
-  font-size: 1.7rem;
-  color: var(--light-title);
-  text-transform: capitalize;
-  font-weight: 600;
-}
-.reviews .slide .user .stars {
-  padding-top: 0.5rem;
-}
-.reviews .slide .user .stars svg {
-  width: 1.5rem;
-  color: var(--color-bg);
-}
-
-.contact {
-  background: var(--dark-text);
-}
 .contact .row {
   display: flex;
   flex-wrap: wrap;
@@ -433,7 +360,7 @@ section {
   flex: 1 1 41rem;
   background: var(--white);
   padding: 2rem;
-  box-shadow: 0 -1rem 8rem 3rem rgba(81, 81, 81, 0.146);
+  box-shadow: 1rem 1rem 9rem 1rem rgba(81, 81, 81, 0.146);
 }
 .contact .row form .box {
   margin: 0.7rem 0;
@@ -446,7 +373,7 @@ section {
 }
 .contact .row form .box:focus {
   border-bottom: var(--border);
-  border-color: var(--yellow);
+  border-color: var(--apple-400);
   transition: 0.4s ease;
 }
 .contact .row form textarea {
@@ -465,7 +392,6 @@ section {
 .logo-container h3 {
   font-size: 3rem;
   color: var(--light-title);
-  text-transform: capitalize;
   font-weight: 600;
   padding: 2rem 0;
 }
@@ -476,17 +402,15 @@ section {
 }
 
 .footer .copyright {
-  background: var(--light-title);
+  background: var(--apple-700);
   padding: 2rem;
-  color: var(--dark-text);
   width: 100%;
 }
 .footer .copyright p {
   font-size: 1.4rem;
   color: var(--light-title);
-  text-transform: capitalize;
-  font-weight: 300;
-  color: var(--dark-text);
+  font-weight: 500;
+  color: var(--apple-50);
   text-align: center;
 }
 
@@ -515,20 +439,6 @@ section {
   .header .navbar {
     display: none;
   }
-  .header.sticky .icons #menu-btn {
-    color: var(--dark-text);
-  }
-  .header.sticky .navbar a {
-    color: var(--light-text);
-  }
-  .header.sticky .navbar a:hover {
-    padding: 0.5rem;
-    color: var(--color-bg);
-  }
-  .header.sticky .navbar a.active {
-    color: var(--color-bg);
-    padding: 0.5rem;
-  }
   .header .social-links {
     display: none;
   }
@@ -537,7 +447,7 @@ section {
     top: 0;
     right: 0;
     width: 30rem;
-    background: var(--dark-text);
+    background: var(--apple-50);
     height: 100%;
     text-align: center;
     z-index: 1100;
@@ -589,26 +499,26 @@ section {
     color: var(--light-text);
     font-size: 1.5rem;
     color: var(--light-title);
-    text-transform: capitalize;
     font-weight: bold;
   }
   #menu-nav a:hover {
-    padding: 0.5rem;
-    color: var(--color-bg);
+    color: var(--apple-400);
   }
   #menu-nav a.active {
-    color: var(--color-bg);
-    padding: 0.5rem;
+    color: var(--apple-400);
   }
   #menu-nav #links a {
     color: var(--light-title);
     padding: 0.7rem;
   }
   #menu-nav #links a:hover {
-    color: var(--color-bg);
+    color: var(--apple-400);
   }
   .projects {
     justify-items: center;
+  }
+  .projects .box-container .box .image::after {
+    opacity: 1;
   }
 }
 @media (max-width: 768px) {
@@ -628,6 +538,11 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .about .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap: 2rem;
   }
 }
 
