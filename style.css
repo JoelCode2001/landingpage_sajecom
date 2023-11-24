@@ -88,7 +88,7 @@ section {
   top: 0;
   right: 0;
   left: 0;
-  padding: 1.5rem 10%;
+  padding: 1.5rem 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,6 +112,7 @@ section {
 }
 .header .social-links {
   text-align: center;
+  margin-right: -12rem;
 }
 .header .social-links a {
   color: var(--apple-950);
@@ -130,6 +131,9 @@ section {
   font-size: 1.2rem;
   color: var(--light-title);
   font-weight: 550;
+}
+.header .social-links .info p:hover {
+  color: var(--apple-400);
 }
 .header .icons #menu-btn {
   margin-right: 4rem;
@@ -151,7 +155,7 @@ section {
   padding: 0;
 }
 .home .slide {
-  min-height: 40rem;
+  min-height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,7 +228,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
   gap: 2rem;
-  align-items: flex-end;
+  align-items: center;
 }
 .about .box-container .box {
   text-align: center;
@@ -414,6 +418,18 @@ section {
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .header .icons #menu-btn {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .header .navbar {
+    display: none;
+  }
+  .header .social-links {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     padding: 1.5rem 1rem;
