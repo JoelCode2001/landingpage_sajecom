@@ -1,6 +1,6 @@
 const navbar = document.querySelector('#menu-nav')
 const header = document.querySelector('.header')
-const section_contact = document.querySelector('#contact')
+const float = document.querySelector('.float')
 
 AOS.init({
     delay: 80,
@@ -21,6 +21,12 @@ navLinks.forEach(link => {
         targetSection.scrollIntoView({ behavior: 'smooth' })
     })
 })
+float.addEventListener('click', (event) => {
+    event.preventDefault()
+    const id = float.getAttribute('href').substring(1)
+    const section = document.getElementById(id)
+    section.scrollIntoView({ behavior: 'smooth' })
+})
 
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active')
@@ -31,7 +37,6 @@ document.querySelector('#close').onclick = () => {
 }
 
 window.onscroll = () => {
-    header.classList.toggle('sticky', window.scrollY > 30)
     navbar.classList.remove('active')
 }
 
@@ -51,26 +56,6 @@ var swiper = new Swiper('.home-slider', {
     },
 })
 
-// var swiper = new Swiper('.reviews-slider', {
-//     loop: true,
-//     grabCursor: true,
-//     spaceBetween: 20,
-//     // scrollbar: {
-//     //     el: '.swiper-scrollbar',
-//     //     draggable: true,
-//     // },
-//     breakpoints: {
-//         640: {
-//             slidesPerView: 1,
-//         },
-//         768: {
-//             slidesPerView: 2,
-//         },
-//         991: {
-//             slidesPerView: 3,
-//         },
-//     },
-// });
 var swiper = new Swiper('.logo-slider', {
     loop: true,
     grabCursor: true,

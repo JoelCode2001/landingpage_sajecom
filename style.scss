@@ -27,7 +27,7 @@
     --light-text: #0C356A;
     --light-title: #072541;
     --dark-text: #FFF6F4;
-    --box-shadow: 0 -1rem 23rem 3rem rgba(248, 109, 3, 0.1);
+    --box-shadow: 0 .4rem 1.1rem .2rem rgba(114, 114, 114, 0.548);
     --border: .1rem solid #0C356A;
 }
 
@@ -133,6 +133,7 @@ section {
     cursor: pointer;
     font-size: 1.7rem;
     font-weight: 500;
+    border-radius: 5px;
 
     &:hover {
         background: var(--apple-500);
@@ -150,7 +151,7 @@ section {
     bottom: 40px;
     right: 40px;
     background-color: var(--light-title);
-    border-radius: 50px;
+    border-radius: 10px;
     text-align: center;
     align-items: center;
     padding-top: 1.2rem;
@@ -167,6 +168,7 @@ section {
     justify-content: space-between;
     z-index: 1000;
     background: var(--apple-50);
+    box-shadow: var(--box-shadow);
 
     .logo img {
         width: 15rem;
@@ -289,6 +291,7 @@ section {
 
             img {
                 width: 100%;
+                border-radius: 1%;
             }
         }
 
@@ -315,6 +318,7 @@ section {
             text-align: center;
             background: var(--apple-100);
             padding: 3rem 2rem;
+            border-radius: 1rem;
 
             h3 {
                 @include titleText(4rem, 500);
@@ -336,12 +340,13 @@ section {
     }
 
     .box-container {
-        @include grid(25rem);
+        @include grid(20rem);
 
         .box {
             text-align: center;
             padding: 3rem;
             background: var(--apple-50);
+            border-radius: 2%;
 
             img {
                 height: 7rem;
@@ -380,6 +385,7 @@ section {
                 height: 30rem;
                 overflow: hidden;
                 position: relative;
+                border-radius: 2%;
 
                 img {
                     height: 100%;
@@ -438,61 +444,6 @@ section {
         }
     }
 }
-
-// .reviews {
-
-//     .reviews-slider {
-//         height: fit-content;
-//     }
-
-//     .slide {
-//         p {
-//             padding: 1.4rem;
-//             background: var(--light-bg);
-//             position: relative;
-//             margin-bottom: 3rem;
-//             line-height: 3rem;
-
-//             @include titleText(1.4rem, 400);
-
-//             &::before {
-//                 content: '';
-//                 position: absolute;
-//                 bottom: -1rem;
-//                 left: 2rem;
-//                 height: 2rem;
-//                 width: 2rem;
-//                 background: var(--light-bg);
-//                 transform: rotate(45deg);
-//             }
-//         }
-
-//         .user {
-//             display: flex;
-//             align-items: center;
-//             gap: 1.5rem;
-
-//             img {
-//                 height: 7rem;
-//                 width: 7rem;
-//             }
-
-//             h3 {
-//                 @include titleText(1.7rem, 600);
-//             }
-
-//             .stars {
-//                 padding-top: .5rem;
-
-//                 svg {
-//                     width: 1.5rem;
-//                     color: var(--color-bg);
-//                 }
-
-//             }
-//         }
-//     }
-// }
 
 .contact {
 
@@ -570,6 +521,8 @@ section {
         .map {
             flex: 1 1 41rem;
             width: 100%;
+            border-radius: 2%;
+
         }
 
         form {
@@ -578,6 +531,7 @@ section {
             padding: 2rem;
             box-shadow: 1rem 1rem 9rem 1rem rgba(81, 81, 81, 0.146);
             position: relative;
+            border-radius: 2%;
 
             .containerInput .box {
                 margin: .7rem 0;
