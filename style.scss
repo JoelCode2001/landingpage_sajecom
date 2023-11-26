@@ -15,7 +15,7 @@
     --apple-950: #082b08;
 
 
-    --white: #fff;
+    --white: #ffff;
     --black: #111;
     --yellow: #f5bf23;
     --light-color: #565656;
@@ -55,6 +55,26 @@
     text-align: center;
 }
 
+@keyframes show {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes treeAnimate {
+    0% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -85,7 +105,7 @@ html {
 }
 
 section {
-    padding: 5rem;
+    padding: 2.5rem;
 }
 
 .swiper-button-next,
@@ -121,6 +141,19 @@ section {
 
 #menu-nav {
     display: none;
+}
+
+.float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--light-title);
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    padding-top: 1.2rem;
 }
 
 .header {
@@ -196,21 +229,11 @@ section {
     }
 }
 
-@keyframes show {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .home {
     padding: 0;
 
     .slide {
-        min-height: 60rem;
+        min-height: 73rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -320,10 +343,6 @@ section {
             padding: 3rem;
             background: var(--apple-50);
 
-            &:hover {
-                transform: scale(1.01);
-            }
-
             img {
                 height: 7rem;
                 margin-bottom: .5rem;
@@ -377,16 +396,19 @@ section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    opacity: 0;
-                    transition: all .2s ease;
                     text-align: center;
                     color: var(--apple-50);
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     font-weight: 500;
+                    // opacity: 0;
+                    clip-path: circle(0 at top left);
+                    // transition: all .2s ease;
+                    transition: clip-path .4s;
                 }
 
                 &:hover::after {
-                    opacity: 1;
+                    // opacity: 1;
+                    clip-path: circle(150% at top right);
                 }
 
             }
@@ -479,6 +501,72 @@ section {
         flex-wrap: wrap;
         gap: 4rem;
 
+        .containerTree {
+            width: 100%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            position: absolute;
+            padding-top: 20rem;
+        }
+
+        .tree {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(30deg);
+            animation: treeAnimate 5s linear infinite;
+        }
+
+        .tree div {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: translateY(calc(25px * var(--x))) translateZ(0px);
+        }
+
+        .tree div.branch span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #69c069, #77dd77);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            border-bottom: 5px solid #00000019;
+            transform-origin: bottom;
+            transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(28.5px);
+        }
+
+        .tree div.stem span {
+            position: absolute;
+            top: 110px;
+            left: calc(50% - 7.5px);
+            width: 15px;
+            height: 50%;
+            background: linear-gradient(90deg, #bb4622, #df7214);
+            border-bottom: 5px solid #00000019;
+            transform-origin: bottom;
+            transform: rotateY(calc(90deg * var(--i))) translateZ(7.5px);
+        }
+
+        .shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            filter: blur(20px);
+            transform-style: preserve-3d;
+            transform: rotateX(90deg) translateZ(-65px);
+        }
+
         .map {
             flex: 1 1 41rem;
             width: 100%;
@@ -489,8 +577,9 @@ section {
             background: var(--white);
             padding: 2rem;
             box-shadow: 1rem 1rem 9rem 1rem rgba(81, 81, 81, 0.146);
+            position: relative;
 
-            .box {
+            .containerInput .box {
                 margin: .7rem 0;
                 width: 100%;
                 padding: 1.5rem;
@@ -711,6 +800,8 @@ section {
             .box {
                 .image {
                     &::after {
+                        clip-path: none;
+                        animation: none;
                         opacity: 1;
                     }
                 }
@@ -728,6 +819,7 @@ section {
 
     .home .slide {
         justify-content: center;
+        min-height: 100rem;
 
         .content {
             text-align: center;

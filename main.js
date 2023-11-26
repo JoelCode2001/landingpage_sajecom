@@ -1,7 +1,12 @@
 const navbar = document.querySelector('#menu-nav')
 const header = document.querySelector('.header')
-const btn_home = document.querySelector('.slide .content .btn')
 const section_contact = document.querySelector('#contact')
+
+AOS.init({
+    delay: 80,
+    offset: 60,
+    duration: 600
+});
 
 const navLinks = document.querySelectorAll('.navbar a')
 navLinks.forEach(link => {
@@ -15,11 +20,6 @@ navLinks.forEach(link => {
         link.classList.add('active')
         targetSection.scrollIntoView({ behavior: 'smooth' })
     })
-})
-
-btn_home.addEventListener('click', (event) => {
-    event.preventDefault()
-    section_contact.scrollIntoView({ behavior: 'smooth' })
 })
 
 document.querySelector('#menu-btn').onclick = () => {
@@ -104,7 +104,7 @@ var swiper = new Swiper('.logo-slider', {
 });
 
 let values = document.querySelectorAll('.num')
-let interval = 5000
+let interval = 8500
 
 values.forEach(value => {
     let startValue = 0
@@ -123,8 +123,16 @@ lightGallery(document.querySelector('.projects .box-container'), {
     mode: 'lg-fade',
 })
 
+const containerTree = document.getElementById('containerTree')
+const containerInput = document.getElementById('containerInput')
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault()
+    sendMessage(event)
+    containerInput.style.opacity = '0.2'
+    containerTree.style.display = 'flex'
+})
+
+const sendMessage = (event) => {
     let data = Object.fromEntries(new FormData(event.target))
     const xhr = new XMLHttpRequest()
     xhr.open("POST", 'https://formsubmit.co/crazyarnold01@gmail.com', true)
@@ -133,10 +141,19 @@ document.querySelector('form').addEventListener('submit', (event) => {
         JSON.stringify(data)
     )
     xhr.onload = function (e) {
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
-            event.reset()
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            containerInput.style.opacity = '1'
+            containerTree.style.display = 'none'
+            Swal.fire({
+                title: "Mensaje enviado",
+                icon: "success",
+                text: "Agradecemos tu colaboración",
+                showConfirmButton: false,
+                timer: 2500
+            });
         }
     }
-})
+}
 
-document.write("Hello!");
+
+document.write('<script></script>')
